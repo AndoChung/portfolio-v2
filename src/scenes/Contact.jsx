@@ -1,13 +1,12 @@
 import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import brush from "../assets/brush.png"
 
 const Contact = () => {
     const {
         register,
         trigger, 
-        formState: {errors}
+        formState: {errors},
     } = useForm();
 
     const onSubmit = async (e) => {
@@ -54,7 +53,7 @@ const Contact = () => {
                         visible: { opacity: 1, y: 0}
                     }}
                 >
-                    <img src={brush} />
+                    <img src="" />
                 </motion.div>
 
                 <motion.div
@@ -71,7 +70,7 @@ const Contact = () => {
                     <form
                         target="_blank"
                         onSubmit={onSubmit}
-                        action="https://formsubmit.co/hotramen15@gmail.com"
+                        action="https://formsubmit.co/05b7258d1a3e650589748f346ad39d93"
                         method="POST"
                     >
                         <input 
@@ -97,7 +96,7 @@ const Contact = () => {
                             placeholder="EMAIL"
                             {...register("email", {
                                 required:true,
-                                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                             })}
                         />
 
@@ -111,6 +110,7 @@ const Contact = () => {
                         <textarea 
                             className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5 "
                             type="text"
+                            name="message"
                             placeholder="MESSAGE"
                             rows="4"
                             cols="50"
